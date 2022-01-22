@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:checked="true"
+        android:color="#FFEB3B"/>
+
+    <item
+        android:id="@+id/log"
+        android:icon="@drawable/ic_organization"
+        android:title="Organizer"
+        android:color="#FFEB3B"/>
+
+    <item
+        android:id="@+id/hosme"
+        android:icon="@drawable/ic_message"
+        android:title="Chat"
+        android:checked="true"
+        android:color="#FFEB3B"/>
+
+    <item
+        android:id="@+id/dlog"
+        android:icon="@drawable/ic_setting"
+        android:title="Setting"
+        android:color="#FFEB3B"/>
+</menu>
