@@ -8,20 +8,20 @@
         android:color="#FFEB3B"/>
 
     <item
-        android:id="@+id/log"
+        android:id="@+id/org"
         android:icon="@drawable/ic_organization"
         android:title="Organizer"
         android:color="#FFEB3B"/>
 
     <item
-        android:id="@+id/hosme"
+        android:id="@+id/chat"
         android:icon="@drawable/ic_message"
         android:title="Chat"
         android:checked="true"
         android:color="#FFEB3B"/>
 
     <item
-        android:id="@+id/dlog"
+        android:id="@+id/settings"
         android:icon="@drawable/ic_setting"
         android:title="Setting"
         android:color="#FFEB3B"/>

@@ -6,18 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-
 
     <io.ak1.BubbleTabBar
         android:id="@+id/bubbleTabBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_45sdp"
         android:background="@color/gov_blue"
         android:elevation="16dp"
         android:padding="7dp"
@@ -37,12 +30,16 @@
     </io.ak1.BubbleTabBar>
 
     <FrameLayout
-        android:layout_width="409dp"
-        android:layout_height="674dp"
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.fragments.HomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bubbleTabBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_45sdp"
+        />
 
-    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

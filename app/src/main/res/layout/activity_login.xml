@@ -180,6 +180,14 @@
                      android:layout_marginLeft="@dimen/_7sdp"/>
              </LinearLayout>
 
+             <TextView
+                 android:id="@+id/bu_loginskip"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Skip"
+                 android:textColor="@color/white"
+                 android:layout_marginTop="@dimen/_15sdp"/>
+
          </LinearLayout>
      </ScrollView>
 
