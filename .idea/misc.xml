@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/background_icon_red.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/bg_info_login.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/bg_login_card.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic__facebook.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.35260416666666666" />
+        <entry key="app/src/main/res/drawable/ic_twitter.xml" value="0.371875" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.26721014492753625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26721014492753625" />
-        <entry key="app/src/main/res/layout/activity_presentation.xml" value="0.33645833333333336" />
+        <entry key="app/src/main/res/layout/activity_presentation.xml" value="0.26721014492753625" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_slider.xml" value="0.33645833333333336" />
         <entry key="app/src/main/res/menu/list.xml" value="0.35572916666666665" />

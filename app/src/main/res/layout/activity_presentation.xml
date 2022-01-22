@@ -4,15 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation">
+    tools:context=".PresentationActivity"
+    android:background="@color/gov_blue">
+
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/slider_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:sliderIndicatorGravity="center_horizontal|bottom"
         app:sliderIndicatorOrientation="horizontal"
-        app:sliderIndicatorUnselectedColor="@color/white">
+        app:sliderIndicatorSelectedColor="@color/gov_yellow"
+        app:sliderIndicatorUnselectedColor="@color/white"
+        app:sliderStartAutoCycle="false">
 
     </com.smarteist.autoimageslider.SliderView>
+
+    <TextView
+        android:id="@+id/bu_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/_15ssp"
+        android:layout_marginRight="@dimen/_25ssp"
+        android:text="Skip"
+        android:fontFamily="@font/montserratmediumitalic"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp">
+
+    </TextView>
 
 </RelativeLayout>

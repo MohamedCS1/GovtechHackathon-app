@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".LoginActivity"
+    android:background="@color/gov_green"
+    android:orientation="vertical">
+
+
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@drawable/background_login">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@drawable/bg_login_card"
+             android:orientation="vertical"
+             android:layout_marginLeft="8dp"
+             android:layout_marginRight="8dp"
+             android:layout_gravity="center"
+             android:layout_marginTop="30dp"
+             android:layout_marginBottom="30dp"
+             android:paddingLeft="@dimen/_20sdp"
+             android:paddingRight="@dimen/_20sdp"
+             android:paddingBottom="@dimen/_20sdp"
+             android:paddingTop="@dimen/_5sdp"
+             android:gravity="center"
+             >
+             <ImageView
+                 android:layout_width="@dimen/_80sdp"
+                 android:layout_height="@dimen/_80sdp"
+                 android:src="@drawable/govtechlogo"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Welcome"
+                 android:textColor="@color/gov_yellow"
+                 android:textStyle="bold"
+                 android:textSize="13pt"
+                 />
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="GovTechHackthon"
+                 android:textColor="@color/white"
+                 android:layout_marginTop="6pt"
+                 android:textSize="7pt"
+                 />
+
+
+
+             <com.google.android.material.textfield.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="52dp"
+                 app:hintEnabled="false"
+                 android:layout_marginTop="7pt"
+                 >
+                 <EditText
+                     android:id="@+id/et_password"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:paddingLeft="7pt"
+                     android:hint="Email"
+                     android:inputType="textEmailAddress"
+                     android:textColor="@color/black"
+                     android:autofillHints="emailAddress"
+                     android:background="@drawable/bg_info_login"
+                     >
+                 </EditText>
+
+             </com.google.android.material.textfield.TextInputLayout>
+
+             <com.google.android.material.textfield.TextInputLayout
+                 app:passwordToggleEnabled="true"
+                 android:layout_width="match_parent"
+                 android:layout_height="52dp"
+                 app:hintEnabled="false"
+                 android:layout_marginTop="7pt"
+                 >
+                 <EditText
+                     android:id="@+id/et_code"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:paddingLeft="7pt"
+                     android:hint="Password"
+                     android:textColor="@color/black"
+                     android:inputType="textPassword"
+                     android:autofillHints="emailAddress"
+                     android:background="@drawable/bg_info_login"
+                     >
+                 </EditText>
+
+             </com.google.android.material.textfield.TextInputLayout>
+
+             <androidx.cardview.widget.CardView
+                 android:id="@+id/bulogin"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="10pt"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 app:cardCornerRadius="6pt"
+                 app:cardBackgroundColor="@color/gov_green"
+                 >
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textStyle="bold"
+                     android:textColor="@color/white"
+                     android:text="Login"
+                     android:paddingLeft="15pt"
+                     android:textSize="8pt"
+                     android:paddingRight="15pt"
+                     android:paddingTop="5pt"
+                     android:paddingBottom="5pt"
+                     >
+
+                 </TextView>
+
+             </androidx.cardview.widget.CardView>
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:layout_marginTop="@dimen/_15sdp"
+                 >
+                 <View
+                     android:layout_width="@dimen/_110sdp"
+                     android:layout_height="@dimen/_1sdp"
+                     android:background="@color/white"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Or connect using"
+                     android:textColor="@color/white"
+                     android:layout_marginRight="@dimen/_5sdp"
+                     android:layout_marginLeft="@dimen/_5sdp"/>
+                 <View
+                     android:layout_width="@dimen/_110sdp"
+                     android:layout_height="@dimen/_1sdp"
+                     android:background="@color/white"/>
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginTop="@dimen/_20sdp">
+                 <ImageView
+                     android:layout_width="@dimen/_35sdp"
+                     android:layout_height="@dimen/_35sdp"
+                     android:src="@drawable/ic_facebook"
+                     android:layout_marginRight="@dimen/_7sdp"
+                     android:layout_marginLeft="@dimen/_7sdp"/>
+                 <ImageView
+                     android:layout_width="@dimen/_35sdp"
+                     android:layout_height="@dimen/_35sdp"
+                     android:src="@drawable/ic_google"
+                     android:layout_marginRight="@dimen/_7sdp"
+                     android:layout_marginLeft="@dimen/_7sdp"/>
+                 <ImageView
+                     android:layout_width="@dimen/_35sdp"
+                     android:layout_height="@dimen/_35sdp"
+                     android:src="@drawable/ic_github"
+                     android:layout_marginRight="@dimen/_7sdp"
+                     android:layout_marginLeft="@dimen/_7sdp"/>
+                 <ImageView
+                     android:layout_width="@dimen/_35sdp"
+                     android:layout_height="@dimen/_35sdp"
+                     android:src="@drawable/ic_twitter"
+                     android:layout_marginRight="@dimen/_7sdp"
+                     android:layout_marginLeft="@dimen/_7sdp"/>
+             </LinearLayout>
+
+         </LinearLayout>
+     </ScrollView>
+
+</LinearLayout>
