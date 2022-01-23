@@ -34,7 +34,8 @@ class MainActivity : AppCompatActivity() {
                         ft.commit()
                     }
                     R.id.org ->{
-                        ft.replace(R.id.fragmentContainerView ,OrganisateurFragment())
+                        val orgFragment = OrganisateurFragment(postsarray!!)
+                        ft.replace(R.id.fragmentContainerView ,orgFragment)
                         ft.commit()
                     }
                     R.id.chat->{

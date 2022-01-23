@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/drawable/background_icon_red.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/bg_info_login.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/bg_login_card.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/bg_message_left.xml" value="0.3859375" />
+        <entry key="app/src/main/res/drawable/bg_message_right.xml" value="0.3859375" />
         <entry key="app/src/main/res/drawable/bg_search_home.xml" value="0.3072916666666667" />
         <entry key="app/src/main/res/drawable/ic__facebook.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2140625" />
@@ -18,7 +20,7 @@
         <entry key="app/src/main/res/layout/activity_presentation.xml" value="0.26721014492753625" />
         <entry key="app/src/main/res/layout/card_post.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.20989583333333334" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_organisateur.xml" value="0.34103260869565216" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.25" />
