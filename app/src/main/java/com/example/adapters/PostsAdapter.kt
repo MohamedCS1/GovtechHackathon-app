@@ -1,6 +1,7 @@
-package com.example.Adapters
+package com.example.adapters
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.Pojo.Post
 import com.example.govtech.R
 import com.example.interfaces.SetOnClickListener
+import com.squareup.picasso.Picasso
+import com.example.tools.CircleTransform
+import com.example.tools.RoundedTransformation
 
-class PostsAdapter:RecyclerView.Adapter<PostsAdapter.Holder_Post>() {
+
+class PostsAdapter(val context:Context):RecyclerView.Adapter<PostsAdapter.Holder_Post>() {
 
     var arrayposts = arrayListOf<Post>()
 
@@ -25,10 +30,12 @@ class PostsAdapter:RecyclerView.Adapter<PostsAdapter.Holder_Post>() {
         holder.display_name.text = arrayposts[position].display_name
         holder.post_views.text = arrayposts[position].post_views
         holder.post_description.text = arrayposts[position].post_description
-        holder.photo_profile.setBackgroundResource(arrayposts[position].photo_profile)
-        holder.post_photo.setBackgroundResource(arrayposts[position].post_photo)
-        holder.post_photo_user.setBackgroundResource(arrayposts[position].photo_profile)
-        holder.itemView.setOnClickListener {
+        Picasso.with(context).load(arrayposts[position].photo_profile).transform(CircleTransform()).into(holder.post_photo)
+        Picasso.with(context).load(arrayposts[position].post_photo).transform(RoundedTransformation(90,90)).into(holder.post_photo)
+        Picasso.with(context).load(arrayposts[position].photo_profile).transform(CircleTransform()).into(holder.photo_profile)
+        Picasso.with(context).load(arrayposts[position].photo_profile).transform(CircleTransform()).into(holder.post_photo_user)
+
+        holder.post_photo.setOnClickListener {
             listerner!!OnPostClick(arrayposts[position].post_photo)
         }
 

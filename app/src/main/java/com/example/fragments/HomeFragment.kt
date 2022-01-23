@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.Adapters.PostsAdapter
+import com.example.adapters.PostsAdapter
 import com.example.Pojo.Post
 import com.example.govtech.Display_Post
 import com.example.govtech.R
@@ -42,7 +42,7 @@ class HomeFragment(val arrayposts:ArrayList<Post>) : Fragment() {
 
         val view:View = inflater.inflate(R.layout.fragment_home, container, false)
         val rv = view.findViewById<RecyclerView>(R.id.home_recyclerview)
-        val adapter = PostsAdapter()
+        val adapter = PostsAdapter(requireContext())
         val lm = LinearLayoutManager(context)
         rv.layoutManager = lm
         rv.adapter = adapter
@@ -58,14 +58,7 @@ class HomeFragment(val arrayposts:ArrayList<Post>) : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
+
         // TODO: Rename and change types and number of parameters
 //        @JvmStatic
 //        fun newInstance(param1: String, param2: String) =

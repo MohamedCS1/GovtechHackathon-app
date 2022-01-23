@@ -13,11 +13,8 @@ class Display_Post : AppCompatActivity() {
         setContentView(R.layout.activity_display_post)
 
         img = findViewById(R.id.display_image)
-        Thread(Runnable {
-            val bundle = intent.extras
-            val image = bundle!!.getInt("image")
-
-            img!!.setBackgroundResource(image)
-        }).start()
+        val bundle = intent.extras
+        val image = bundle!!.getInt("image")
+        img!!.setBackgroundResource(image)
     }
 }

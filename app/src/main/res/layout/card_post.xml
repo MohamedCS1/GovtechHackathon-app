@@ -31,10 +31,10 @@
                 android:layout_centerInParent="false"
                 android:layout_centerHorizontal="false"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
                 android:cropToPadding="false"
-                android:padding="@dimen/_5sdp" />
+                android:padding="@dimen/_2sdp" />
 
             <TextView
                 android:id="@+id/display_name"
@@ -76,12 +76,11 @@
             <ImageView
                 android:id="@+id/post_photo"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_200sdp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/post_location"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_3sdp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/post5"
                 android:cropToPadding="true"
                 android:fitsSystemWindows="false" />
 
@@ -195,8 +194,7 @@
                         android:layout_marginBottom="@dimen/_5sdp"
                         android:adjustViewBounds="false"
                         android:cropToPadding="false"
-                        android:padding="@dimen/_5sdp"
-                        />
+                        android:padding="@dimen/_5sdp" />
 
                     <EditText
                         android:id="@+id/user_comment_box"
@@ -207,7 +205,7 @@
                         android:ems="10"
                         android:inputType="textPersonName"
                         android:text="Add a comment..."
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="#E2FFFFFF"
                         android:textSize="12sp" />
 
                 </RelativeLayout>
