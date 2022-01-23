@@ -7,7 +7,6 @@ import com.example.fragments.ChatFragment
 import com.example.fragments.HomeFragment
 import com.example.fragments.OrganisateurFragment
 import com.example.fragments.SettingsFragment
-import com.squareup.picasso.Picasso
 import io.ak1.BubbleTabBar
 import io.ak1.OnBubbleClickListener
 
@@ -19,32 +18,38 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bottomtabBar = findViewById(R.id.bubbleTabBar)
-        bottomtabBar!!.setSelectedWithId(R.id.home)
         load_posts()
+
+        val fm = supportFragmentManager
+        val ft = fm.beginTransaction()
+        ft.replace(R.id.fragmentContainerView ,HomeFragment(postsarray!!))
+        ft.commit()
+
+        bottomtabBar = findViewById(R.id.bubbleTabBar)
+
         bottomtabBar!!.addBubbleListener(object :OnBubbleClickListener{
             override fun onBubbleClick(id: Int) {
-                val fm = supportFragmentManager
-                val ft = fm.beginTransaction()
+                val fmi = supportFragmentManager
+                val fti = fmi.beginTransaction()
                 when(id)
                 {
                     R.id.home->{
                         val homeFragment = HomeFragment(postsarray!!)
-                        ft.replace(R.id.fragmentContainerView ,homeFragment)
-                        ft.commit()
+                        fti.replace(R.id.fragmentContainerView ,homeFragment)
+                        fti.commit()
                     }
                     R.id.org ->{
                         val orgFragment = OrganisateurFragment(postsarray!!)
-                        ft.replace(R.id.fragmentContainerView ,orgFragment)
-                        ft.commit()
+                        fti.replace(R.id.fragmentContainerView ,orgFragment)
+                        fti.commit()
                     }
                     R.id.chat->{
-                        ft.replace(R.id.fragmentContainerView ,ChatFragment())
-                        ft.commit()
+                        fti.replace(R.id.fragmentContainerView ,ChatFragment())
+                        fti.commit()
                     }
                     R.id.settings->{
-                        ft.replace(R.id.fragmentContainerView ,SettingsFragment())
-                        ft.commit()
+                        fti.replace(R.id.fragmentContainerView ,SettingsFragment())
+                        fti.commit()
                     }
                 }
             }

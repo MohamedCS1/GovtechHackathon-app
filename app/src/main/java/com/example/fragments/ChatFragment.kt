@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import com.example.govtech.R
+import com.example.tools.CircleTransform
+import com.squareup.picasso.Picasso
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -32,8 +35,12 @@ class ChatFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false)
+        val view = inflater.inflate(R.layout.fragment_chat, container, false)
+        val photo1 = view.findViewById<ImageView>(R.id.chat_photo1)
+        val photo2 = view.findViewById<ImageView>(R.id.chat_photo2)
+        Picasso.with(context).load(R.drawable.user5_photo).transform(CircleTransform()).into(photo1)
+        Picasso.with(context).load(R.drawable.user5_photo).transform(CircleTransform()).into(photo2)
+        return view
     }
 
     companion object {
