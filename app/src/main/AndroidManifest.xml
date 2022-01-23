@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GovTech">
         <activity
-            android:name=".LoginActivity"
+            android:name=".Display_Post"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity
             android:name=".PresentationActivity"
             android:exported="true"
