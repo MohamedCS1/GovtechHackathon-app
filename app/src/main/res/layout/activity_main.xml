@@ -7,34 +7,90 @@
     tools:context=".MainActivity">
 
 
-    <io.ak1.BubbleTabBar
-        android:id="@+id/bubbleTabBar"
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bottom_navigation_view_linear"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:background="@color/gov_blue"
-        android:elevation="16dp"
-        android:padding="7dp"
-        app:bubbletab_custom_font="@font/montserratitalic"
-        app:bubbletab_disabled_icon_color="@color/gov_yellow"
-        app:bubbletab_horizontal_padding="20dp"
-        app:bubbletab_icon_padding="5sp"
-        app:bubbletab_icon_size="20dp"
-        app:bubbletab_menuResource="@menu/list"
-        app:bubbletab_tab_corner_radius="25dp"
-        app:bubbletab_title_size="16sp"
-        app:bubbletab_vertical_padding="10dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
         app:layout_constraintStart_toStartOf="parent">
 
-    </io.ak1.BubbleTabBar>
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:fontFamily="@font/montserratitalic"
+            app:bt_active="true"
+            app:bt_titleSize="@dimen/_13sdp"
+            app:bt_colorActive="@color/gov_yellow"
+            app:bt_colorInactive="@color/gov_yellow"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/bg_login_card"
+            android:backgroundTint="#22F6CE4B"
+            app:bt_title="Home" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_org"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:fontFamily="@font/montserratitalic"
+            app:bt_titleSize="@dimen/_13sdp"
+            app:bt_colorActive="@color/gov_yellow"
+            app:bt_colorInactive="@color/gov_yellow"
+            app:bt_icon="@drawable/ic_organization"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/bg_login_card"
+            android:backgroundTint="#22F6CE4B"
+            app:bt_title="Organizer" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserratitalic"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            app:bt_titleSize="@dimen/_13sdp"
+            app:bt_colorActive="@color/gov_yellow"
+            app:bt_colorInactive="@color/gov_yellow"
+            app:bt_icon="@drawable/ic_message"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/bg_login_card"
+            android:backgroundTint="#22F6CE4B"
+            app:bt_title="Chat" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserratitalic"
+            app:bt_titleSize="@dimen/_13sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            app:bt_colorActive="@color/gov_yellow"
+            app:bt_colorInactive="@color/gov_yellow"
+            app:bt_icon="@drawable/ic_setting"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/bg_login_card"
+            android:backgroundTint="#22F6CE4B"
+            app:bt_title="Setting" />
 
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
     <FrameLayout
         android:id="@+id/fragmentContainerView"
         android:name="com.example.fragments.HomeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/bubbleTabBar"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view_linear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

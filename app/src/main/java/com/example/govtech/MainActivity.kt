@@ -2,21 +2,26 @@ package com.example.govtech
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.Pojo.Post
 import com.example.fragments.ChatFragment
 import com.example.fragments.HomeFragment
 import com.example.fragments.OrganisateurFragment
 import com.example.fragments.SettingsFragment
-import io.ak1.BubbleTabBar
-import io.ak1.OnBubbleClickListener
+import com.gauravk.bubblenavigation.BubbleNavigationLinearView
+import com.gauravk.bubblenavigation.listener.BubbleNavigationChangeListener
+
 
 class MainActivity : AppCompatActivity() {
-    var bottomtabBar:BubbleTabBar? = null
+
+    var bubbleNav:BubbleNavigationLinearView? = null
     var postsarray:ArrayList<Post>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        bubbleNav = findViewById(R.id.bottom_navigation_view_linear)
 
         load_posts()
 
@@ -25,29 +30,25 @@ class MainActivity : AppCompatActivity() {
         ft.replace(R.id.fragmentContainerView ,HomeFragment(postsarray!!))
         ft.commit()
 
-        bottomtabBar = findViewById(R.id.bubbleTabBar)
-
-        bottomtabBar!!.addBubbleListener(object :OnBubbleClickListener{
-            override fun onBubbleClick(id: Int) {
+        bubbleNav!!.setNavigationChangeListener(object :BubbleNavigationChangeListener{
+            override fun onNavigationChanged(view: View?, position: Int) {
                 val fmi = supportFragmentManager
                 val fti = fmi.beginTransaction()
-                when(id)
+                when(position)
                 {
-                    R.id.home->{
-                        val homeFragment = HomeFragment(postsarray!!)
-                        fti.replace(R.id.fragmentContainerView ,homeFragment)
+                    0 -> {
+                        fti.replace(R.id.fragmentContainerView ,HomeFragment(postsarray!!))
                         fti.commit()
                     }
-                    R.id.org ->{
-                        val orgFragment = OrganisateurFragment(postsarray!!)
-                        fti.replace(R.id.fragmentContainerView ,orgFragment)
+                    1 -> {
+                        fti.replace(R.id.fragmentContainerView ,OrganisateurFragment(postsarray!!))
                         fti.commit()
                     }
-                    R.id.chat->{
+                    2 -> {
                         fti.replace(R.id.fragmentContainerView ,ChatFragment())
                         fti.commit()
                     }
-                    R.id.settings->{
+                    3 -> {
                         fti.replace(R.id.fragmentContainerView ,SettingsFragment())
                         fti.commit()
                     }
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
     }
 
     fun load_posts()

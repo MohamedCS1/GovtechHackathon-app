@@ -17,7 +17,7 @@
         <entry key="app/src/main/res/drawable/ic_twitter.xml" value="0.371875" />
         <entry key="app/src/main/res/layout/activity_display_post.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.26721014492753625" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.26721014492753625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_presentation.xml" value="0.26721014492753625" />
         <entry key="app/src/main/res/layout/card_post.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.33" />
