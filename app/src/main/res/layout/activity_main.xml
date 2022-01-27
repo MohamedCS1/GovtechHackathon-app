@@ -82,7 +82,21 @@
             app:bt_shape="@drawable/bg_login_card"
             android:backgroundTint="#22F6CE4B"
             app:bt_title="Setting" />
-
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserratitalic"
+            app:bt_titleSize="@dimen/_13sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            app:bt_colorActive="@color/gov_yellow"
+            app:bt_colorInactive="@color/gov_yellow"
+            app:bt_icon="@drawable/ic_profile"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/bg_login_card"
+            android:backgroundTint="#22F6CE4B"
+            app:bt_title="Profile" />
 
     </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
     <FrameLayout

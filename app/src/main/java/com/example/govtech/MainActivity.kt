@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.Pojo.Post
-import com.example.fragments.ChatFragment
-import com.example.fragments.HomeFragment
-import com.example.fragments.OrganisateurFragment
-import com.example.fragments.SettingsFragment
+import com.example.fragments.*
 import com.gauravk.bubblenavigation.BubbleNavigationLinearView
 import com.gauravk.bubblenavigation.listener.BubbleNavigationChangeListener
 
@@ -50,6 +47,10 @@ class MainActivity : AppCompatActivity() {
                     }
                     3 -> {
                         fti.replace(R.id.fragmentContainerView ,SettingsFragment())
+                        fti.commit()
+                    }
+                    4 -> {
+                        fti.replace(R.id.fragmentContainerView ,ProfileFragment(postsarray!!))
                         fti.commit()
                     }
                 }
