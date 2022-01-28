@@ -11,6 +11,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.Pojo.Post
 import com.example.govtech.CommentsActivity
 import com.example.govtech.R
@@ -18,11 +22,17 @@ import com.example.interfaces.SetOnClickListener
 import com.squareup.picasso.Picasso
 import com.example.tools.CircleTransform
 import com.example.tools.RoundedTransformation
+import com.bumptech.glide.request.RequestOptions
+
+
+
 
 
 class PostsAdapter(val context:Context):RecyclerView.Adapter<PostsAdapter.Holder_Post>() {
 
     var arrayposts = arrayListOf<Post>()
+
+    var array_position = -1
 
     private var listerner:SetOnClickListener? = null
 
@@ -30,15 +40,29 @@ class PostsAdapter(val context:Context):RecyclerView.Adapter<PostsAdapter.Holder
         return Holder_Post(LayoutInflater.from(parent.context).inflate(R.layout.card_post ,parent ,false))
     }
 
+    @SuppressLint("CheckResult")
+    override fun onViewAttachedToWindow(holder: Holder_Post) {
+        val requestOptions = RequestOptions()
+        requestOptions.transform(RoundedCorners(70))
+        Glide.with(context).load(arrayposts[array_position].photo_profile).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.post_photo)
+        Glide.with(context).load(arrayposts[array_position].post_photo).apply(requestOptions).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.post_photo)
+        Glide.with(context).load(arrayposts[array_position].photo_profile).circleCrop().diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.photo_profile)
+        Glide.with(context).load(arrayposts[array_position].photo_profile).circleCrop().diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.post_photo_user)
+
+//        Picasso.with(context).load(arrayposts[array_position].photo_profile).transform(CircleTransform()).into(holder.post_photo)
+//        Picasso.with(context).load(arrayposts[array_position].post_photo).transform(RoundedTransformation(90,90)).into(holder.post_photo)
+//        Picasso.with(context).load(arrayposts[array_position].photo_profile).transform(CircleTransform()).into(holder.photo_profile)
+//        Picasso.with(context).load(arrayposts[array_position].photo_profile).transform(CircleTransform()).into(holder.post_photo_user)
+        super.onViewAttachedToWindow(holder)
+    }
+
     override fun onBindViewHolder(holder: PostsAdapter.Holder_Post, position: Int) {
+        array_position = position
         holder.display_name.text = arrayposts[position].display_name
         holder.post_views.text = arrayposts[position].post_views
         holder.post_description.text = arrayposts[position].post_description
         holder.post_location.text = arrayposts[position].post_location
-        Picasso.with(context).load(arrayposts[position].photo_profile).transform(CircleTransform()).into(holder.post_photo)
-        Picasso.with(context).load(arrayposts[position].post_photo).transform(RoundedTransformation(90,90)).into(holder.post_photo)
-        Picasso.with(context).load(arrayposts[position].photo_profile).transform(CircleTransform()).into(holder.photo_profile)
-        Picasso.with(context).load(arrayposts[position].photo_profile).transform(CircleTransform()).into(holder.post_photo_user)
+
 
         holder.post_photo.setOnClickListener {
             listerner!!OnPostClick(arrayposts[position].post_photo)

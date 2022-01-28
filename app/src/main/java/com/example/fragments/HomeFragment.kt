@@ -39,7 +39,7 @@ class HomeFragment(val arrayposts:ArrayList<Post>) : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         val view:View = inflater.inflate(R.layout.fragment_home, container, false)
         val rv = view.findViewById<RecyclerView>(R.id.home_recyclerview)
@@ -47,8 +47,10 @@ class HomeFragment(val arrayposts:ArrayList<Post>) : Fragment() {
         val lm = LinearLayoutManager(context)
         rv.hasFixedSize()
         rv.isNestedScrollingEnabled = false
+        rv.setItemViewCacheSize(20)
+        rv.isDrawingCacheEnabled = true
+        rv.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
         lm.isSmoothScrolling
-
         rv.layoutManager = lm
         rv.adapter = adapter
         adapter.setList(arrayposts)

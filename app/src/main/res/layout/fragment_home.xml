@@ -1,13 +1,11 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context="com.example.fragments.HomeFragment">
 
-   <androidx.coordinatorlayout.widget.CoordinatorLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
        <com.google.android.material.appbar.AppBarLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -55,8 +53,7 @@
 
        <androidx.core.widget.NestedScrollView
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:clipToPadding="false"
+           android:layout_height="match_parent"
            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintEnd_toEndOf="parent"
@@ -65,10 +62,9 @@
            <androidx.recyclerview.widget.RecyclerView
                android:id="@+id/home_recyclerview"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
                android:background="@color/gov_blue"
                android:gravity="center" />
        </androidx.core.widget.NestedScrollView>
-   </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
