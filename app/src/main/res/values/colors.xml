@@ -10,5 +10,6 @@
     <color name="gov_blue">#041C32</color>
     <color name="gov_yellow">#F6CE4B</color>
     <color name="gov_green">#1DB275</color>
+    <color name="colorPrimaryDark">#041C32</color>
 
 </resources>

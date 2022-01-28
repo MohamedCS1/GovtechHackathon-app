@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import com.example.interfaces.SetOnClickListener
 
-class Display_Post : AppCompatActivity() {
+class DisplayPostActivity : AppCompatActivity() {
 
     var img:ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {

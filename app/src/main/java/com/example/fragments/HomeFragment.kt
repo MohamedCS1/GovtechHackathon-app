@@ -6,11 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.adapters.PostsAdapter
 import com.example.Pojo.Post
-import com.example.govtech.Display_Post
+import com.example.govtech.DisplayPostActivity
 import com.example.govtech.R
 import com.example.interfaces.SetOnClickListener
 
@@ -44,12 +45,16 @@ class HomeFragment(val arrayposts:ArrayList<Post>) : Fragment() {
         val rv = view.findViewById<RecyclerView>(R.id.home_recyclerview)
         val adapter = PostsAdapter(requireContext())
         val lm = LinearLayoutManager(context)
+        rv.hasFixedSize()
+        rv.isNestedScrollingEnabled = false
+        lm.isSmoothScrolling
+
         rv.layoutManager = lm
         rv.adapter = adapter
         adapter.setList(arrayposts)
         adapter.set_click_listener(object :SetOnClickListener{
             override fun OnPostClick(img: Int) {
-                val intent = Intent(context ,Display_Post::class.java)
+                val intent = Intent(context ,DisplayPostActivity::class.java)
                 intent.putExtra("image" ,img)
                 startActivity(intent)
             }

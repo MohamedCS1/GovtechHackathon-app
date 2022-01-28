@@ -77,6 +77,7 @@ android:background="@color/gov_blue">
             app:srcCompat="@drawable/ic_bookmark" />
 
         <TextView
+            android:id="@+id/bu_see_all"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_1sdp"
@@ -112,6 +113,7 @@ android:background="@color/gov_blue">
         android:id="@+id/rv_saved"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:paddingBottom="@dimen/_5sdp"
         android:layout_weight="1">
 
     </androidx.recyclerview.widget.RecyclerView>

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@color/gov_blue"
     android:layout_marginBottom="@dimen/_2sdp"
-
+    android:focusableInTouchMode="true"
     >
 
     <androidx.cardview.widget.CardView
@@ -206,7 +206,8 @@
                         android:inputType="textPersonName"
                         android:text="Add a comment..."
                         android:textColor="#E2FFFFFF"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:windowSoftInputMode="stateHidden" />
 
                 </RelativeLayout>
             </LinearLayout>

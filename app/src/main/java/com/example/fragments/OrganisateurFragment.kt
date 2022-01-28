@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Pojo.Post
 import com.example.adapters.PostsAdapter
-import com.example.govtech.Display_Post
+import com.example.govtech.DisplayPostActivity
 import com.example.govtech.R
 import com.example.interfaces.SetOnClickListener
 
@@ -48,10 +48,13 @@ class OrganisateurFragment(val arrayposts:ArrayList<Post>) : Fragment() {
         val lm = LinearLayoutManager(context)
         rv.layoutManager = lm
         rv.adapter = adapter
+        rv.hasFixedSize()
+        rv.isNestedScrollingEnabled = false
+        lm.isSmoothScrolling
         adapter.setList(arrayposts)
         adapter.set_click_listener(object : SetOnClickListener {
             override fun OnPostClick(img: Int) {
-                val intent = Intent(context , Display_Post::class.java)
+                val intent = Intent(context , DisplayPostActivity::class.java)
                 intent.putExtra("image" ,img)
                 startActivity(intent)
             }

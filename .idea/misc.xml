@@ -12,21 +12,25 @@
         <entry key="app/src/main/res/drawable/bg_profile.xml" value="0.22916666666666666" />
         <entry key="app/src/main/res/drawable/bg_search_home.xml" value="0.3072916666666667" />
         <entry key="app/src/main/res/drawable/ic__facebook.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.3859375" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/ic_like.xml" value="0.22916666666666666" />
         <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.35260416666666666" />
         <entry key="app/src/main/res/drawable/ic_options.xml" value="0.3703125" />
         <entry key="app/src/main/res/drawable/ic_twitter.xml" value="0.371875" />
+        <entry key="app/src/main/res/layout/activity_all_post_saved.xml" value="0.28177083333333336" />
+        <entry key="app/src/main/res/layout/activity_comments.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_display_post.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.26721014492753625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_presentation.xml" value="0.26721014492753625" />
-        <entry key="app/src/main/res/layout/card_post.xml" value="0.67" />
-        <entry key="app/src/main/res/layout/card_post_saved.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/layout/card_post.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/card_post_saved.xml" value="0.245018115942029" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_organisateur.xml" value="0.34103260869565216" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.21302083333333333" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.47331583552055995" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_slider.xml" value="0.33645833333333336" />
         <entry key="app/src/main/res/menu/list.xml" value="0.35572916666666665" />

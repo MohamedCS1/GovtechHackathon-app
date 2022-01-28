@@ -7,16 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Pojo.Post
 import com.example.adapters.PostSavedAdapter
-import com.example.adapters.PostsAdapter
-import com.example.govtech.Display_Post
+import com.example.govtech.AllPostSavedActivity
+import com.example.govtech.DisplayPostActivity
 import com.example.govtech.R
 import com.example.interfaces.SetOnClickListener
-import com.example.tools.CircleTransform
 import com.example.tools.RoundedTransformation
 import com.squareup.picasso.Picasso
 
@@ -50,18 +49,25 @@ class ProfileFragment(val arrayposts_saved:ArrayList<Post>) : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
         val rv = view.findViewById<RecyclerView>(R.id.rv_saved)
+        val bu_see_all = view.findViewById<TextView>(R.id.bu_see_all)
         val adapter = PostSavedAdapter(requireContext())
         val lm = GridLayoutManager(context ,2)
         rv.layoutManager = lm
         rv.adapter = adapter
+
         adapter.setList(arrayposts_saved)
         adapter.set_click_listener(object : SetOnClickListener {
             override fun OnPostClick(img: Int) {
-                val intent = Intent(context , Display_Post::class.java)
+                val intent = Intent(context , DisplayPostActivity::class.java)
                 intent.putExtra("image" ,img)
                 startActivity(intent)
             }
         })
+
+        bu_see_all.setOnClickListener {
+            startActivity(Intent(context ,AllPostSavedActivity::class.java))
+        }
+
         val image_profile = view.findViewById<ImageView>(R.id.image_profile)
         Picasso.with(context).load(R.drawable.user5_photo).transform(RoundedTransformation(50 ,30)).into(image_profile)
 
